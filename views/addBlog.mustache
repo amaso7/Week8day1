@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{menu}}
+    <h1>Add Blog Post</h1>
+    <form id = "addblogform" action = "/blog/addblog" method = "post">
+        <label for = "post-title">Title:</label>
+        <input id = "post-title" type = "text" name="postTitle" requied/>
+        <label for = "post-author"> author:</label>
+        <input id = "post-author" type = "text" name = "postAuthor" required/>
+        <label for = "postText">Blog Post:</label>
+        <textarea id = "post-text" rows ="20" cols ="15" name="postText">
+        </textarea>
+        <input type ="submit" value = "Add"/>
+        </form>
+    
+</body>
+</html>

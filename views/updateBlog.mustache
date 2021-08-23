@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{> menu}}
+    <h1> Edit Blog Post</h1>
+    {{#posts}}
+    <form id ="updateblogform" action = "/blog/{{postid}}/updateblog/update" method = "POST">
+        <label for = "post-title">Title:</label>
+        <input id = "post-author" type= "text" name = "postTitle" value = "{{title}}" requied>
+        <label for = "postText">Blog Post:</label>
+        <input id = "post-text" rows ="60" cols = "100" name = "postText">{{posttext}}</textarea>
+
+        <input type ="submit" value ="save">
+    </form>
+    {{/posts}}
+</body>
+</html>

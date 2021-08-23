@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{menu}}
+    <h1>Blog Posts</h1>
+    <div>
+    {{#posts}}
+        <h2>{{title}}</h2>
+        <h3> Author:{{author}}</h3>
+        <h4>Date Posted: {{dateposted}}</h4>
+        <p>posttext</p>
+        <a href = "/blog/{{postid}}/updateblog">Edit</a>
+        <form id = "deleteblogform" action = "/blog/{{postId}}/deleteblog/" method = "POST">
+            <input type ="submit" value = "Delete">
+        </form>
+    {{/posts}}
+    </div>
+</body>
+</html>
